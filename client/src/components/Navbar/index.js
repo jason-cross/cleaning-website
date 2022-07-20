@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { FaBars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 import { 
     Nav,
     NavbarContainer,
@@ -25,23 +26,54 @@ const Navbar = ({toggle}) => {
         window.addEventListener('scroll', changeNav)
     }, [])
 
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to='/'>lia's cleaning</NavLogo>
+                    <NavLogo to='/' onClick={toggleHome}>lia's cleaning</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='about'>About</NavLinks>
+                            <NavLinks 
+                                to='about'
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact='true'
+                                offset={-80}
+                            >
+                                About
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='services'>Services</NavLinks>
+                            <NavLinks 
+                                to='services'
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact='true'
+                                offset={-80}
+                            >
+                                Services
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='enquire'>Enquire</NavLinks>
+                            <NavLinks 
+                                to='enquire'
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact='true'
+                                offset={-80}
+                            >
+                                Enquire
+                            </NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>
