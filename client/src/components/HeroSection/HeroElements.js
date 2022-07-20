@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IoIosArrowDown } from 'react-icons/io';
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -6,7 +7,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30 px;
-    height: calc(100vh - 80px);
+    height: 100vh;
     position: relative;
     z-index: 1;
 `;
@@ -70,4 +71,16 @@ export const HeroP = styled.p`
     @media screen and (max-width: 480px) {
         font-size: 18px;
     };
+`;
+
+export const HeroBtnWrapper = styled.div`
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const ArrowDown = styled(IoIosArrowDown)`
+    margin-left: 8px;
+    font-size: 20px;
 `;

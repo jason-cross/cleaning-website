@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
     HeroBg, 
     HeroContainer, 
     HeroContent, 
     HeroH1, 
     HeroP, 
-    VideoBg 
+    VideoBg,
+    HeroBtnWrapper, 
+    ArrowDown
 } from './HeroElements';
+import { Button } from '../ButtonElement'
 import Video from '../../assets/videos/home-background.mp4'
 
 const HeroSection = () => {
+    const [hover, setHover] = useState(false);
+
+    const onHover = () => {
+        setHover(!hover)
+    };
+
     return (
         <HeroContainer>
             <HeroBg>
@@ -20,6 +29,17 @@ const HeroSection = () => {
                 <HeroP>
                     I offer affordable cleaning services!
                 </HeroP>
+                <HeroBtnWrapper>
+                    <Button 
+                        to='about' 
+                        onMouseEnter={onHover} 
+                        onMouseLeave={onHover}
+                        primary='true'
+                        dark='true'
+                    >
+                        Read More {hover ? <ArrowDown /> : ''}
+                    </Button>
+                </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
     );
