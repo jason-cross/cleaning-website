@@ -13,7 +13,41 @@ export const homeObjOne = {
         life so you can spend more time on what matters most to you.`,
     buttonLabel: 'Read more',
     imgStart: false,
-    img: require('../../assets/images/about.png'),
+    img: require('../../assets/images/about.svg').default,
+    alt: 'Cleaning',
+    dark: true,
+    primary: true,
+    darkText: false
+};
+
+export const homeObjTwo = {
+    id: 'services',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'What I offer',
+    headLine: `Services`,
+    description: `services list`,
+    buttonLabel: 'Read more',
+    imgStart: true,
+    img: require('../../assets/images/about.svg').default,
+    alt: 'Cleaning',
+    dark: false,
+    primary: false,
+    darkText: true
+};
+
+export const homeObjThree = {
+    id: 'enquire',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: 'Send me an email',
+    headLine: `Enquire Now`,
+    description: 'enquiry form',
+    buttonLabel: 'Read more',
+    imgStart: false,
+    img: require('../../assets/images/about.svg').default,
     alt: 'Cleaning',
     dark: true,
     primary: true,

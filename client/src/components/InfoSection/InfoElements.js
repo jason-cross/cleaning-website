@@ -74,15 +74,19 @@ export const Heading = styled.h1`
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
-    }
+    };
 `;
 
 export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 24px;
     color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+
+    @media screen and (max-width: 480px) {
+        font-size: 12px;
+    };
 `;
 
 export const BtnWrap = styled.div`
