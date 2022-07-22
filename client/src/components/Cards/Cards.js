@@ -1,10 +1,7 @@
 import React from 'react';
 import CardItem from './CardItem';
 import './Cards.css';
-import img1 from '../../assets/images/pexels-cottonbro-4107097.jpg';
-import img2 from '../../assets/images/pexels-cottonbro-4108772.jpg';
-import img3 from '../../assets/images/pexels-cottonbro-4112727.jpg';
-import img4 from '../../assets/images/pexels-cottonbro-4107120.jpg';
+import { card1, card2, card3, card4 } from './data';
 
 const Cards = () => {
     return (
@@ -12,32 +9,32 @@ const Cards = () => {
             <div className = 'cards__container'>
                 <div className='cards__wrapper'>
                         <CardItem 
-                            src={img1}
+                            src={require('../../assets/images/pexels-cottonbro-4107097.jpg')}
                             alt='Cleaning image 1'
-                            text='General Cleaning'
-                            label='$35/hr'
-                            path='/services'
+                            title={card1.title}
+                            desc={card1.desc}
+                            label={'$'+card1.price+'/hr'}
                         />
                         <CardItem 
-                            src={img2}
+                            src={require('../../assets/images/pexels-cottonbro-4108772.jpg')}
                             alt='Cleaning image 2'
-                            text='Deep Clean'
-                            label='$40/hr'
-                            path='/services'
+                            title={card2.title}
+                            desc={card2.desc}
+                            label={'$'+card2.price+'/hr'}
                         />
                         <CardItem 
-                            src={img3}
+                            src={require('../../assets/images/pexels-cottonbro-4112727.jpg')}
                             alt='Cleaning image 3'
-                            text='Organise and Declutter'
-                            label='$30/hr'
-                            path='/services'
+                            title={card3.title}
+                            desc={card3.desc}
+                            label={'$'+card3.price+'/hr'}
                         />
                         <CardItem 
-                            src={img4}
+                            src={require('../../assets/images/pexels-cottonbro-4107120.jpg')}
                             alt='Cleaning image 4'
-                            text='Vacate Clean'
-                            label='$45/hr'
-                            path='/services'
+                            title={card4.title}
+                            desc={card4.desc}
+                            label={'$'+card4.price+'/hr'}
                         />
                 </div>
             </div>

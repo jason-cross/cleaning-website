@@ -2,6 +2,7 @@ import React from 'react';
 import './CardItem.css';
 
 const CardItem = (props) => {
+    console.log(props.desc);
     return (
         <>
             <div className='cards__item'>
@@ -14,7 +15,12 @@ const CardItem = (props) => {
                         />
                     </figure>
                     <div className='cards__item__info'>
-                        <h5 className='cards__item__text'>{props.text}</h5>
+                        <div className='cards__item__title'>
+                            <h2>{props.title}</h2>
+                        </div>
+                        <div className='cards__item__desc'>
+                            {props.desc}
+                        </div>
                     </div>
                 </div>
             </div>

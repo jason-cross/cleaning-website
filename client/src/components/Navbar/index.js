@@ -34,7 +34,7 @@ const Navbar = ({toggle}) => {
         <>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to='/' onClick={toggleHome}>lia's cleaning</NavLogo>
+                    <NavLogo to='/' onClick={toggleHome}>Lia the Cleaner</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
