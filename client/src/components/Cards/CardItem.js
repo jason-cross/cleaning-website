@@ -6,7 +6,7 @@ const CardItem = (props) => {
     return (
         <>
             <div className='cards__item'>
-                <div className='cards__item__div' to={props.path}>
+                <div className='cards__item__div'>
                     <figure className='cards__item__pic-wrap' data-category={props.label}>
                         <img 
                             className='cards__item__img'

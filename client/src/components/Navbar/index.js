@@ -26,22 +26,27 @@ const Navbar = ({toggle}) => {
         window.addEventListener('scroll', changeNav)
     }, [])
 
-    const toggleHome = () => {
-        scroll.scrollToTop();
-    }
-
     return (
         <>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to='/' onClick={toggleHome}>Lia the Cleaner</NavLogo>
+                    <NavLogo 
+                        to='home'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}
+                    >
+                        Lia the Cleaner
+                    </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
                             <NavLinks 
-                                to='about2'
+                                to='about'
                                 smooth={true}
                                 duration={500}
                                 spy={true}
@@ -53,7 +58,7 @@ const Navbar = ({toggle}) => {
                         </NavItem>
                         <NavItem>
                             <NavLinks 
-                                to='services2'
+                                to='services'
                                 smooth={true}
                                 duration={500}
                                 spy={true}

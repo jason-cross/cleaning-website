@@ -3,7 +3,7 @@ import Cards from '../components/Cards/Cards';
 
 const Services = () => {
   return (
-    <div className='page' id='services2'>
+    <div className='page' id='services'>
         <h1>What I Offer</h1>
         <Cards />
     </div>

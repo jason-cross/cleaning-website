@@ -6,8 +6,8 @@ import { card1, card2, card3, card4 } from './data';
 const Cards = () => {
     return (
         <div className='cards'>
-            <div className = 'cards__container'>
-                <div className='cards__wrapper'>
+            <div class = 'cards__container snaps-inline'>
+                {/* <div className='cards__wrapper'> */}
                         <CardItem 
                             src={require('../../assets/images/pexels-cottonbro-4107097.jpg')}
                             alt='Cleaning image 1'
@@ -36,7 +36,7 @@ const Cards = () => {
                             desc={card4.desc}
                             label={'$'+card4.price+'/hr'}
                         />
-                </div>
+                {/* </div> */}
             </div>
         </div>
     );
